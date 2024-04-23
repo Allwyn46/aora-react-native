@@ -37,12 +37,14 @@ export default function App() {
 
                     <CustomButton
                         title="Continue with Email"
-                        handlePress={() => router.push('/register')}
+                        handlePress={() => router.push('/login')}
                         containerStyles="w-full mt-7"
                     />
                 </View>
 
             </ScrollView>
+
+            {/* FOR THE NOTIFICATION PANEL COLOR IN THE TOP */}
 
             <StatusBar backgroundColor='#161622' style='light' />
         </SafeAreaView>

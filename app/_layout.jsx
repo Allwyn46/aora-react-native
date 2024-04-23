@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { Slot, Stack, SplashScreen } from 'expo-router'
 import { useFonts } from 'expo-font'
+import { StatusBar } from 'expo-status-bar';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,9 +29,12 @@ const RootLayout = () => {
     if (!fontsLoaded && !error) return null;
 
     return (
-        <Stack>
-            <Stack.Screen name='index' options={{ headerShown: false }} />
-        </Stack>
+        <>
+            <Stack>
+                <Stack.Screen name='index' options={{ headerShown: false }} />
+            </Stack>
+            <StatusBar backgroundColor='#161622' style='light' />
+        </>
     )
 }
 
